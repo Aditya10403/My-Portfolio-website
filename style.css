@@ -8,7 +8,10 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #0b0c10;
+  background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: #fff;
 }
 #header {
@@ -45,6 +48,7 @@ nav ul li a::after {
   width: 0;
   height: 3px;
   background: #66fcf1;
+  background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -275,6 +279,10 @@ nav ul li a:hover::after {
   display: inline-block;
   background: #66fcf1;
   color: #1f2833;
+  transition: all;
+}
+.btn.btn2:active {
+  transform: translate(-1.5px);
 }
 .contact-right form {
   width: 100%;
