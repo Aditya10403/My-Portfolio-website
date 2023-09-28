@@ -8,18 +8,17 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #141e30; /* fallback for old browsers */
+  background: #141e30;
   background: -webkit-linear-gradient(
     to right,
     #243b55,
     #141e30
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  );
   background: linear-gradient(
     to right,
     #243b55,
     #141e30
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  ); 
   color: #fff;
 }
 #header {
@@ -70,17 +69,42 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
+main {
+  display: flex;
+  justify-content: space-between;
+  margin: 23px 0;
+}
+main > div {
+  width: 55%;
+}
 .header-text {
   margin-top: 20%;
-  font-size: 30px;
+  width: 70%;
+  font-size: 1.6rem;
 }
 .header-text h1 {
-  font-size: 55px;
-  margin-top: 20px;
+  font-size: 2.4rem;
 }
 .header-text h1 span {
   color: #66fcf1;
 }
+.image {
+  margin: 6rem 0rem 6rem 5rem;
+  text-align: center;
+  width: 70%;
+  position: relative;
+}
+.image img {
+  width: 100%;
+  position: absolute;
+}
+.image svg {
+  padding: 3rem 2rem 1rem 2rem;
+}
+.liquid path {
+  fill: #1df1f8;
+}
+
 /* <!-- -------about------- --> */
 #about {
   padding: 95px 0;
@@ -95,8 +119,7 @@ nav ul li a:hover::after {
   flex-basis: 35%;
 }
 .about-col-1 img {
-  width: 100%;
-  border-radius: 15px;
+  width: 60%;
 }
 .about-col-2 {
   flex-basis: 60%;
@@ -160,7 +183,7 @@ nav ul li a:hover::after {
   font-size: 13px;
   font-weight: 300;
   border-radius: 10px;
-  transition: background 0.5s, transform 0.5s;
+  transition: all 1s;
 }
 .services-list div i {
   font-size: 50px;
@@ -179,8 +202,10 @@ nav ul li a:hover::after {
   display: inline-block;
 }
 .services-list div:hover {
-  background: #45a29e;
+  background: #1dfff4;
+  color: #243b55;
   transform: translateY(-10px);
+  box-shadow: 0px 5px 15px #1df1f8;
 }
 /* ------portfolio------ */
 #portfolio {
@@ -253,10 +278,11 @@ nav ul li a:hover::after {
   border-radius: 6px;
   text-decoration: none;
   color: white;
-  transition: background 0.5s;
+  transition: all 0.5s;
 }
 .btn:hover {
   background: #66fcf1;
+  color: #243b55;
 }
 /* -------contact-------- */
 .contact-left {
@@ -329,23 +355,12 @@ form .btn2 {
 nav .fa-solid {
   display: none;
 }
-
-@media only screen and (max-width: 600px) {
-  #header {
-    background: #141e30; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #243b55,
-      #141e30
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #243b55, #141e30);
+@media only screen and (max-width: 900px) {
+  main {
+    flex-direction: column;
   }
-  .header-text {
-    margin-top: 100%;
-    font-size: 16px;
-  }
-  .header-text h1 {
-    font-size: 30px;
+  .image{
+    opacity: 0;
   }
   nav .fa-solid {
     display: block;
@@ -375,6 +390,27 @@ nav .fa-solid {
   .fa-bars {
     cursor: pointer;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  /* #header {
+    background: #141e30;
+    background: -webkit-linear-gradient(
+      to right,
+      #243b55,
+      #141e30
+    );
+    background: linear-gradient(to right, #243b55, #141e30);
+  } */
+  .header-text {
+    margin-top: 60%;
+    width: 100%;
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 30px;
+  }
+  
   .sub-title {
     font-size: 40px;
   }
@@ -382,7 +418,8 @@ nav .fa-solid {
   .about-col-2 {
     flex-basis: 100%;
   }
-  .about-col-1 {
+  .about-col-1 img {
+    width: 100%;
     margin-bottom: 30px;
   }
   .about-col-2 {
@@ -404,4 +441,7 @@ nav .fa-solid {
   color: #61b752;
   margin-top: -40px;
   display: block;
+}
+#element {
+  color: #66fcf1;
 }
