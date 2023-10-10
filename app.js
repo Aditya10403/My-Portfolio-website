@@ -1,3 +1,10 @@
+var preloader = document.getElementById("preloader");
+window.addEventListener("load", () => {
+  preloader.style = `
+    display: none;
+  `;
+});
+
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbzWk_uHPhzQ0naIvNsPPtVjVtij9KrZxYaHicKKWh-70b7GpIhgvX0DX2lHyjR0PGLa/exec";
 const form = document.forms["submit-to-google-sheet"];
