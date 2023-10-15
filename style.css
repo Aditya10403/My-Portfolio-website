@@ -97,6 +97,8 @@ main > div {
 }
 .image img {
   width: 100%;
+  padding-left: 5rem;
+  padding-top: 3rem;
   position: absolute;
 }
 .image svg {
