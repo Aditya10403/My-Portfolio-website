@@ -9,16 +9,8 @@ html {
 }
 body {
   background: #141e30;
-  background: -webkit-linear-gradient(
-    to right,
-    #243b55,
-    #141e30
-  );
-  background: linear-gradient(
-    to right,
-    #243b55,
-    #141e30
-  ); 
+  background: -webkit-linear-gradient(to right, #243b55, #141e30);
+  background: linear-gradient(to right, #243b55, #141e30);
   color: #fff;
 }
 #header {
@@ -127,9 +119,13 @@ main > div {
 .about-col-2 {
   flex-basis: 60%;
 }
+.about-col-2 p{
+  line-height: 1.5rem;
+}
 .sub-title {
   font-size: 60px;
   font-weight: 600;
+  margin-bottom: 10px;
   color: white;
 }
 .tab-titles {
@@ -358,25 +354,22 @@ form .btn2 {
 /* -------small screen------- */
 nav .fa-solid {
   display: none;
+  color: #16d9e3;
 }
 @media only screen and (max-width: 900px) {
-  main {
-    flex-direction: column;
-  }
-  .image{
-    display: none;
-  }
   nav .fa-solid {
     display: block;
     font-size: 25px;
   }
   nav ul {
-    background: #45a29e;
+    background: #1f2833;
+    border-radius: 10px;
+    color: #16d9e3;
     position: fixed;
     top: 0;
-    right: -200px;
-    width: 200px;
-    height: 100vh;
+    right: -160px;
+    width: 160px;
+    height: auto;
     padding-top: 50px;
     z-index: 2;
     transition: right 0.5s;
@@ -397,25 +390,26 @@ nav .fa-solid {
 }
 
 @media only screen and (max-width: 600px) {
-  /* #header {
-    background: #141e30;
-    background: -webkit-linear-gradient(
-      to right,
-      #243b55,
-      #141e30
-    );
-    background: linear-gradient(to right, #243b55, #141e30);
-  } */
+  main {
+    flex-direction: column-reverse;
+  }
+  .image {
+    margin: 0rem;
+    width: auto;
+  }
+  .image img{
+    padding-left: 3rem;
+  }
+
   .header-text {
-    margin-top: 60%;
     width: 100%;
     font-size: 16px;
   }
   .header-text h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
-  #about{
-    padding: 0;
+  #about {
+    padding: 0px;
   }
   .sub-title {
     font-size: 40px;
@@ -425,13 +419,14 @@ nav .fa-solid {
     flex-basis: 100%;
   }
   .about-col-1 img {
-    width: 100%;
-    margin-bottom: 30px;
+    width: 75%;
+    margin-inline: 2rem;
+    margin-bottom: 2rem;
   }
   .about-col-2 {
     font-size: 14px;
   }
-  #portfolio{
+  #portfolio {
     padding: 10px;
   }
   .tab-links {
@@ -445,7 +440,6 @@ nav .fa-solid {
   .copyright {
     font-size: 14px;
   }
-  
 }
 #msg {
   color: #61b752;
@@ -457,11 +451,11 @@ nav .fa-solid {
 }
 
 /* preloader */
-#preloader{
-  background:  #101010 url(images/preloader.gif) no-repeat center;
+#preloader {
+  background: #101010 url(images/preloader.gif) no-repeat center;
   background-size: 30%;
   height: 100vh;
-  width:100%;
+  width: 100%;
   position: fixed;
-  z-index:100;
+  z-index: 100;
 }
