@@ -1,8 +1,16 @@
-var preloader = document.getElementById("preloader");
+const preloader = document.getElementById("preloader");
+const element = document.querySelector("#element");
 window.addEventListener("load", () => {
   preloader.style = `
     display: none;
   `;
+  setTimeout(() => {
+    let typed = new Typed(element, {
+      strings: ['Programmer.', 'Web Developer.'],
+      typeSpeed: 100,
+    });
+   typed.loop = true
+  }, 3800); 
 });
 
 const scriptURL =
