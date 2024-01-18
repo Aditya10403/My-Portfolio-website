@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
       typeSpeed: 100,
     });
    typed.loop = true
-  }, 3200); 
+  }, 2000); 
 });
 
 const scriptURL =
