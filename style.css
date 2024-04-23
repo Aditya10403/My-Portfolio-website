@@ -406,6 +406,9 @@ nav .fa-solid {
   color: #16d9e3;
 }
 @media only screen and (max-width: 900px) {
+  .gitbtn{
+    visibility: hidden;
+  }
   nav .fa-solid {
     display: block;
     font-size: 25px;
