@@ -180,7 +180,7 @@ main > div {
 #skills i{
   font-size: 40px;
 }
-#skills img{
+#skills li img{
   width: 50px;
 }
 /* --------services------- */
@@ -286,6 +286,15 @@ main > div {
 .work:hover .layer {
   height: 100%;
 }
+.btn2{
+  margin-top: 10px;
+  padding: 1px;
+  font-size: small;
+  color: white;
+}
+.btn2 i{
+  padding-left: 2px;
+}
 .btn {
   display: block;
   margin: 50px auto;
@@ -296,6 +305,9 @@ main > div {
   text-decoration: none;
   color: white;
   transition: all 0.5s;
+}
+.gitbtn {
+  margin-left: 20px;
 }
 .btn:hover {
   background: #66fcf1;
@@ -318,6 +330,7 @@ main > div {
 }
 .social-icons {
   margin-top: 30px;
+  transition: all 0.5s;
 }
 .social-icons a {
   text-decoration: none;
@@ -325,11 +338,26 @@ main > div {
   margin-right: 15px;
   color: #c5c5c5;
   display: inline-block;
-  transition: transform 0.5;
+  transition: all ease-out transform 0.5s;
 }
 .social-icons a:hover {
   color: #66fcf1;
   transform: translateY(-5px);
+  transition: all transform 0.5s;
+    transition-behavior: normal;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: transform;
+}
+.social-icons a::after{
+  transform: translateY(5px);
+  transition: transform 0.5s;
+    transition-behavior: normal;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: transform;
 }
 .btn.btn2 {
   display: inline-block;
@@ -337,8 +365,12 @@ main > div {
   color: #1f2833;
   transition: all;
 }
-.btn.btn2:active {
-  transform: translate(-1.5px);
+.btn:hover,.btn2:hover,.gitbtn:hover{
+  color: white;
+  transition: all ease-in-out 0.5s;
+}
+.btn.btn2.gitbtn:active {
+  transform: translate(3px);
 }
 .contact-right form {
   width: 100%;
