@@ -4,98 +4,119 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background: #141e30;
   background: -webkit-linear-gradient(to right, #243b55, #141e30);
   background: linear-gradient(to right, #243b55, #141e30);
   color: #fff;
 }
+
+textarea {
+  resize: none;
+}
+
 #header {
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
 }
+
 .container {
   padding: 10px 10%;
 }
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .logo {
   padding-top: 0.8rem;
   width: 140px;
 }
+
 nav ul li {
   display: inline-block;
   list-style: none;
   margin: 10px 20px;
 }
+
 nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
   position: relative;
 }
+
 nav ul li a::after {
   content: "";
   width: 0;
   height: 3px;
   background: #66fcf1;
-  background-image: radial-gradient(
-    circle 248px at center,
-    #16d9e3 0%,
-    #30c7ec 47%,
-    #46aef7 100%
-  );
+  background-image: radial-gradient(circle 248px at center,
+      #16d9e3 0%,
+      #30c7ec 47%,
+      #46aef7 100%);
   position: absolute;
   left: 0;
   bottom: -6px;
   transition: 0.5s;
 }
+
 nav ul li a:hover::after {
   width: 100%;
 }
+
 main {
   display: flex;
   justify-content: space-between;
   margin: 23px 0;
 }
-main > div {
+
+main>div {
   width: 55%;
 }
+
 .header-text {
   margin-top: 20%;
   width: 70%;
   font-size: 1.6rem;
 }
+
 .header-text h1 {
   font-size: 2.4rem;
 }
+
 .header-text h1 span {
   color: #66fcf1;
 }
+
 .image {
   margin: 6rem 0rem 6rem 5rem;
   text-align: center;
   width: 70%;
   position: relative;
 }
+
 .image img {
   width: 100%;
   padding-left: 5rem;
   padding-top: 3rem;
   position: absolute;
 }
+
 .image svg {
   padding: 3rem 2rem 1rem 2rem;
 }
+
 .liquid path {
   fill: #1df1f8;
 }
@@ -105,45 +126,55 @@ main > div {
   padding: 95px 0;
   color: #c5c5c5;
 }
-.tab-contents ul li{
-  color:#c5c5c5;
+
+.tab-contents ul li {
+  color: #c5c5c5;
   font-family: monospace;
 }
+
 .row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .about-col-1 {
   flex-basis: 35%;
 }
+
 .about-col-1 img {
   width: 60%;
 }
+
 .about-col-2 {
   flex-basis: 60%;
 }
-.about-col-2 p{
+
+.about-col-2 p {
   line-height: 1.5rem;
 }
+
 .sub-title {
   font-size: 60px;
   font-weight: 600;
   margin-bottom: 10px;
   color: white;
 }
+
 .tab-titles {
   display: flex;
   margin: 20px 0 40px;
 }
+
 .tab-links {
   margin-right: 50px;
-  color:#66fcf1;
+  color: #66fcf1;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   position: relative;
 }
+
 .tab-links::after {
   content: "";
   width: 0;
@@ -154,46 +185,57 @@ main > div {
   bottom: -8px;
   transition: 0.5s;
 }
+
 .tab-links.active-link::after {
   width: 50%;
 }
+
 .tab-contents ul li {
   list-style: none;
   margin: 10px 0;
 }
+
 .tab-contents ul li span {
-  color:#1df1f8;
+  color: #1df1f8;
   font-size: 14px;
 }
+
 .tab-contents {
   display: none;
 }
+
 .tab-contents.active-tab {
   display: block;
 }
-#skills ul{
+
+#skills ul {
   display: grid;
   width: 80%;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   row-gap: 30px;
 }
-#skills i{
+
+#skills i {
   font-size: 40px;
 }
-#skills li img{
+
+#skills li img {
   width: 50px;
 }
+
 /* --------services------- */
 #services {
   padding: 50px 0px;
   margin-bottom: 70px;
 }
+
 .services-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 100px;
 }
+
 .services-list div {
   background-color: #1f2833;
   padding: 40px;
@@ -202,15 +244,18 @@ main > div {
   border-radius: 10px;
   transition: all 1s;
 }
+
 .services-list div i {
   font-size: 50px;
   margin-bottom: 30px;
 }
+
 .services-list div h2 {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 40px;
 }
+
 .services-list div a {
   text-decoration: none;
   color: white;
@@ -218,27 +263,32 @@ main > div {
   margin-top: 20px;
   display: inline-block;
 }
+
 .services-list div:hover {
   background: #1dfff4;
   color: #243b55;
   transform: translateY(-10px);
   box-shadow: 0px 5px 15px #1df1f8;
 }
+
 /* ------portfolio------ */
 #portfolio {
   padding: 50px 0px 50px 0px;
 }
+
 .work-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
 }
+
 .work {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
+
 .work img {
   width: 100%;
   height: 315x;
@@ -246,6 +296,7 @@ main > div {
   display: block;
   transition: transform 0.5s;
 }
+
 .layer {
   width: 100%;
   height: 0;
@@ -264,10 +315,12 @@ main > div {
   font-size: 14px;
   transition: height 0.5s;
 }
+
 .layer h3 {
   font-weight: 500;
   margin-bottom: 20px;
 }
+
 .layer a {
   margin-top: 20px;
   color: #66fcf1;
@@ -280,21 +333,26 @@ main > div {
   border-radius: 50%;
   text-align: center;
 }
+
 .work:hover img {
   transform: scale(1.1);
 }
+
 .work:hover .layer {
   height: 100%;
 }
-.btn2{
+
+.btn2 {
   margin-top: 10px;
   padding: 1px;
   font-size: small;
   color: white;
 }
-.btn2 i{
+
+.btn2 i {
   padding-left: 2px;
 }
+
 .btn {
   display: block;
   margin: 50px auto;
@@ -306,32 +364,40 @@ main > div {
   color: white;
   transition: all 0.5s;
 }
+
 .gitbtn {
   margin-left: 20px;
 }
+
 .btn:hover {
   background: #66fcf1;
   color: #243b55;
 }
+
 /* -------contact-------- */
 .contact-left {
   flex-basis: 35%;
 }
+
 .contact-right {
   flex-basis: 60%;
 }
+
 .contact-left p {
   margin-top: 30px;
 }
+
 .contact-left p i {
   color: #66fcf1;
   margin-right: 15px;
   font-size: 25px;
 }
+
 .social-icons {
   margin-top: 30px;
   transition: all 0.5s;
 }
+
 .social-icons a {
   text-decoration: none;
   font-size: 30px;
@@ -340,41 +406,50 @@ main > div {
   display: inline-block;
   transition: all ease-out transform 0.5s;
 }
+
 .social-icons a:hover {
   color: #66fcf1;
   transform: translateY(-5px);
   transition: all transform 0.5s;
-    transition-behavior: normal;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-    transition-property: transform;
+  transition-behavior: normal;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: transform;
 }
-.social-icons a::after{
+
+.social-icons a::after {
   transform: translateY(5px);
   transition: transform 0.5s;
-    transition-behavior: normal;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-    transition-property: transform;
+  transition-behavior: normal;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: transform;
 }
+
 .btn.btn2 {
   display: inline-block;
   background: #66fcf1;
   color: #1f2833;
   transition: all;
 }
-.btn:hover,.btn2:hover,.gitbtn:hover{
+
+.btn:hover i,
+.btn2:hover i,
+.gitbtn:hover i {
   color: white;
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.2s;
 }
+
 .btn.btn2.gitbtn:active {
   transform: translate(3px);
 }
+
 .contact-right form {
   width: 100%;
 }
+
 form input,
 form textarea {
   width: 100%;
@@ -387,12 +462,14 @@ form textarea {
   font-size: 18px;
   border-radius: 6px;
 }
+
 form .btn2 {
   padding: 14px 60px;
   font-size: 18px;
   margin-top: 20px;
   cursor: pointer;
 }
+
 .copyright {
   width: 100%;
   text-align: center;
@@ -400,19 +477,93 @@ form .btn2 {
   background: #1f2833;
   margin-top: 20px;
 }
+
+.footer {
+  display: flex;
+  padding: 25px 122px;
+  justify-content: space-evenly;
+}
+
+.footer .footer-first img {
+  width: 175px;
+}
+
+.footer ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .footer-fourth p a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer .footer-fourth p a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer .footer-fourth .social-icons {
+  padding: 20px;
+  text-align: center;
+  margin-left: -60px;
+}
+
+.footer .footer-fourth .social-icons a {
+  color: #fff;
+  line-height: 30px;
+  font-size: 30px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.footer .footer-fourth .social-icons a:hover {
+  color: #66fcf1;
+  transform: translateY(-5px);
+  transition: all transform 0.5s;
+  transition-behavior: normal;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: transform;
+}
+
+footer .footer-rights {
+  text-align: center;
+  color: gray;
+  padding: 12px;
+}
+
+.footer-second ul li a:hover {
+  color: #16d9e3;
+  transition: all ease-in 0.3s;
+}
+
+.email a[href^="mailto:"]:hover {
+  color: #16d9e3;
+  transition: all ease-in 0.3s;
+}
+
 /* -------small screen------- */
 nav .fa-solid {
   display: none;
   color: #16d9e3;
 }
+
 @media only screen and (max-width: 900px) {
-  .gitbtn{
+  .gitbtn {
     visibility: hidden;
   }
+
   nav .fa-solid {
     display: block;
     font-size: 25px;
   }
+
   nav ul {
     background: #1f2833;
     border-radius: 10px;
@@ -426,16 +577,19 @@ nav .fa-solid {
     z-index: 2;
     transition: right 0.5s;
   }
+
   nav ul li {
     display: block;
     margin: 25px;
   }
+
   nav ul .fa-solid {
     position: absolute;
     top: 25px;
     left: 25px;
     cursor: pointer;
   }
+
   .fa-bars {
     cursor: pointer;
   }
@@ -445,11 +599,13 @@ nav .fa-solid {
   main {
     flex-direction: column-reverse;
   }
+
   .image {
     margin: 0rem;
     width: auto;
   }
-  .image img{
+
+  .image img {
     padding-left: 3rem;
   }
 
@@ -457,54 +613,68 @@ nav .fa-solid {
     width: 100%;
     font-size: 16px;
   }
+
   .header-text h1 {
     font-size: 25px;
   }
+
   #about {
     padding: 0px;
     margin-bottom: 10%;
   }
+
   .sub-title {
     font-size: 40px;
   }
+
   .about-col-1,
   .about-col-2 {
     flex-basis: 100%;
   }
+
   .about-col-1 img {
     width: 75%;
     margin-inline: 2rem;
     margin-bottom: 2rem;
   }
+
   .about-col-2 {
     font-size: 14px;
   }
+
   #portfolio {
     padding: 10px;
   }
+
   .tab-links {
     font-size: 16px;
     margin-right: 20px;
   }
+
   .contact-left,
   .contact-right {
     flex-basis: 100%;
   }
+
   .copyright {
     font-size: 14px;
   }
-  .tab-contents.active-tab{
+
+  .tab-contents.active-tab {
     height: 190px;
   }
-  #skills ul{
+
+  #skills ul {
     width: auto;
   }
 }
+
 #msg {
   color: #61b752;
   margin-top: -40px;
   display: block;
 }
+
 #element {
   color: #66fcf1;
 }
