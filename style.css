@@ -477,8 +477,11 @@ form .btn2 {
   background: #1f2833;
   margin-top: 20px;
 }
-
+.footer-rights{
+  background-color: #141e30;
+}
 .footer {
+  background-color: #141e30;
   display: flex;
   padding: 25px 122px;
   justify-content: space-evenly;
@@ -666,6 +669,9 @@ nav .fa-solid {
 
   #skills ul {
     width: auto;
+  }
+  .footer {
+    display: none;
   }
 }
 
